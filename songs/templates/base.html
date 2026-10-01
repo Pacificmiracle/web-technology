@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome to Geetshala{% endblock %}</title>
+</head>
+<body>
+    <header style="background-color: #f8f9fa; padding: 10px; text-align: center;">
+        <h1>Geetshala</h1>
+        <nav>
+            <a href="{% url 'song_list' %}">Home</a>
+        </nav>
+    </header>
+    <main style="padding: 20px;">
+  {% block content %}{% endblock %}
+</main>
+<footer style="background-color: #f8f9fa; padding: 10px; text-align: center;">
+    <p>&copy; 2026 Geetshala. All rights reserved.</p>
+</footer>
+</body>
+</html>

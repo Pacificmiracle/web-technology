@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songs</title>
+</head>
+<body>
+
+<h1>My Songs</h1>
+
+{% for song in songs %}
+    <div>
+        <h2>
+            <a href="{% url 'song_detail' song.id %}">
+                {{ song.title }}
+            </a>
+        </h2>
+
+        <p>Release date: {{ song.release_date }}</p>
+    </div>
+{% empty %}
+    <p>No published songs found.</p>
+{% endfor %}
+
+</body>
+</html>
